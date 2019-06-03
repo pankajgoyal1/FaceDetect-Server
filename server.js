@@ -12,7 +12,7 @@ const image=require('./controllers/image.js')
 const db =knex({
 	client:'pg',
 	connection:{
-		host:'127.0.0.1',
+		host:'postgresql-globular-13650',
 		password:'',
 		user:'postgres',
 		database:'first'
