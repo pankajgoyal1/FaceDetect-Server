@@ -12,10 +12,8 @@ const image=require('./controllers/image.js')
 const db =knex({
 	client:'pg',
 	connection:{
-		host:'postgresql-globular-13650',
-		password:'',
-		user:'postgres',
-		database:'first'
+		host:process.env.DATABASE_URL,
+		ssl:true
 	}
 });
 db.select('*').from('users').then(data=>{
